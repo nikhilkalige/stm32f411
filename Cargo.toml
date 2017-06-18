@@ -1,0 +1,14 @@
+[package]
+authors = ["Nikhil Kalige <nikhilkalige@gmail.com>"]
+categories = ["embedded", "hardware-support", "no-std"]
+description = "Peripheral access API for STM32F411 microcontrollers"
+documentation = "https://docs.rs/stm32f411"
+keywords = ["arm", "cortex-m", "stm32", "svd2rust"]
+license = "MIT"
+name = "stm32f411"
+repository = "https://github.com/nikhilkalige/stm32f411"
+version = "0.1.0"
+
+[dependencies]
+cortex-m = "0.2.11"
+vcell = "0.1.0"
