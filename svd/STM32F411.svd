@@ -18460,7 +18460,7 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
             </field>
           </fields>
         </register>
-        <register>
+        <register derivedFrom="S0CR">
           <name>S1CR</name>
           <displayName>S1CR</displayName>
           <description>stream x configuration
@@ -18469,253 +18469,8 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
           <size>0x20</size>
           <access>read-write</access>
           <resetValue>0x00000000</resetValue>
-          <fields>
-            <field>
-              <name>CHSEL</name>
-              <description>Channel selection</description>
-              <bitOffset>25</bitOffset>
-              <bitWidth>3</bitWidth>
-              <enumeratedValues>
-                <enumeratedValue>
-                  <name>CHANNEL_0</name>
-                  <value>0</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>CHANNEL_1</name>
-                  <value>1</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>CHANNEL_2</name>
-                  <value>2</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>CHANNEL_3</name>
-                  <value>3</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>CHANNEL_4</name>
-                  <value>4</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>CHANNEL_5</name>
-                  <value>5</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>CHANNEL_6</name>
-                  <value>6</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>CHANNEL_7</name>
-                  <value>7</value>
-                </enumeratedValue>
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>MBURST</name>
-              <description>Memory burst transfer
-              configuration</description>
-              <bitOffset>23</bitOffset>
-              <bitWidth>2</bitWidth>
-              <enumeratedValues>
-                <name>MBURST</name>
-                <enumeratedValue>
-                  <name>SINGLE</name>
-                  <value>0</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>INC4</name>
-                  <value>1</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>INC8</name>
-                  <value>2</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>INC16</name>
-                  <value>3</value>
-                </enumeratedValue>
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>PBURST</name>
-              <description>Peripheral burst transfer
-              configuration</description>
-              <bitOffset>21</bitOffset>
-              <bitWidth>2</bitWidth>
-              <enumeratedValues derivedFrom="MBURST">
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>CT</name>
-              <description>Current target (only in double buffer
-              mode)</description>
-              <bitOffset>19</bitOffset>
-              <bitWidth>1</bitWidth>
-            </field>
-            <field>
-              <name>DBM</name>
-              <description>Double buffer mode</description>
-              <bitOffset>18</bitOffset>
-              <bitWidth>1</bitWidth>
-            </field>
-            <field>
-              <name>PL</name>
-              <description>Priority level</description>
-              <bitOffset>16</bitOffset>
-              <bitWidth>2</bitWidth>
-              <enumeratedValues>
-                <enumeratedValue>
-                  <name>LOW</name>
-                  <value>0</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>MEDIUM</name>
-                  <value>1</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>HIGH</name>
-                  <value>2</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>VERY_HIGH</name>
-                  <value>3</value>
-                </enumeratedValue>
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>PINCOS</name>
-              <description>Peripheral increment offset
-              size</description>
-              <bitOffset>15</bitOffset>
-              <bitWidth>1</bitWidth>
-            </field>
-            <field>
-              <name>MSIZE</name>
-              <description>Memory data size</description>
-              <bitOffset>13</bitOffset>
-              <bitWidth>2</bitWidth>
-              <enumeratedValues>
-                <name>MSIZE</name>
-                <enumeratedValue>
-                  <name>BYTE</name>
-                  <value>0</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>HALF_WORD</name>
-                  <value>1</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>WORD</name>
-                  <value>2</value>
-                </enumeratedValue>
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>PSIZE</name>
-              <description>Peripheral data size</description>
-              <bitOffset>11</bitOffset>
-              <bitWidth>2</bitWidth>
-              <enumeratedValues derivedFrom="MSIZE">
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>MINC</name>
-              <description>Memory increment mode</description>
-              <bitOffset>10</bitOffset>
-              <bitWidth>1</bitWidth>
-              <enumeratedValues derivedFrom="ADC_Common.CCR.TSVREFE.ENABLED">
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>PINC</name>
-              <description>Peripheral increment mode</description>
-              <bitOffset>9</bitOffset>
-              <bitWidth>1</bitWidth>
-              <enumeratedValues derivedFrom="ADC_Common.CCR.TSVREFE.ENABLED">
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>CIRC</name>
-              <description>Circular mode</description>
-              <bitOffset>8</bitOffset>
-              <bitWidth>1</bitWidth>
-              <enumeratedValues derivedFrom="ADC_Common.CCR.TSVREFE.ENABLED">
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>DIR</name>
-              <description>Data transfer direction</description>
-              <bitOffset>6</bitOffset>
-              <bitWidth>2</bitWidth>
-              <enumeratedValues>
-                <enumeratedValue>
-                  <name>PERIPH_TO_MEMORY</name>
-                  <value>0</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>MEMORY_TO_PERIPH</name>
-                  <value>1</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>MEMORY_TO_MEMORY</name>
-                  <value>2</value>
-                </enumeratedValue>
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>PFCTRL</name>
-              <description>Peripheral flow controller</description>
-              <bitOffset>5</bitOffset>
-              <bitWidth>1</bitWidth>
-            </field>
-            <field>
-              <name>TCIE</name>
-              <description>Transfer complete interrupt
-              enable</description>
-              <bitOffset>4</bitOffset>
-              <bitWidth>1</bitWidth>
-              <enumeratedValues derivedFrom="ADC_Common.CCR.TSVREFE.ENABLED">
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>HTIE</name>
-              <description>Half transfer interrupt
-              enable</description>
-              <bitOffset>3</bitOffset>
-              <bitWidth>1</bitWidth>
-              <enumeratedValues derivedFrom="ADC_Common.CCR.TSVREFE.ENABLED">
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>TEIE</name>
-              <description>Transfer error interrupt
-              enable</description>
-              <bitOffset>2</bitOffset>
-              <bitWidth>1</bitWidth>
-              <enumeratedValues derivedFrom="ADC_Common.CCR.TSVREFE.ENABLED">
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>DMEIE</name>
-              <description>Direct mode error interrupt
-              enable</description>
-              <bitOffset>1</bitOffset>
-              <bitWidth>1</bitWidth>
-              <enumeratedValues derivedFrom="ADC_Common.CCR.TSVREFE.ENABLED">
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>EN</name>
-              <description>Stream enable / flag stream ready when
-              read low</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>1</bitWidth>
-              <enumeratedValues derivedFrom="ADC_Common.CCR.TSVREFE.ENABLED">
-              </enumeratedValues>
-            </field>
-          </fields>
         </register>
-        <register>
+        <register derivedFrom="S0NDTR">
           <name>S1NDTR</name>
           <displayName>S1NDTR</displayName>
           <description>stream x number of data
@@ -18724,17 +18479,8 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
           <size>0x20</size>
           <access>read-write</access>
           <resetValue>0x00000000</resetValue>
-          <fields>
-            <field>
-              <name>NDT</name>
-              <description>Number of data items to
-              transfer</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>16</bitWidth>
-            </field>
-          </fields>
         </register>
-        <register>
+        <register derivedFrom="S0PAR">
           <name>S1PAR</name>
           <displayName>S1PAR</displayName>
           <description>stream x peripheral address
@@ -18743,16 +18489,8 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
           <size>0x20</size>
           <access>read-write</access>
           <resetValue>0x00000000</resetValue>
-          <fields>
-            <field>
-              <name>PA</name>
-              <description>Peripheral address</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>32</bitWidth>
-            </field>
-          </fields>
         </register>
-        <register>
+        <register derivedFrom="S0M0AR">
           <name>S1M0AR</name>
           <displayName>S1M0AR</displayName>
           <description>stream x memory 0 address
@@ -18761,16 +18499,8 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
           <size>0x20</size>
           <access>read-write</access>
           <resetValue>0x00000000</resetValue>
-          <fields>
-            <field>
-              <name>M0A</name>
-              <description>Memory 0 address</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>32</bitWidth>
-            </field>
-          </fields>
         </register>
-        <register>
+        <register derivedFrom="S0M1AR">
           <name>S1M1AR</name>
           <displayName>S1M1AR</displayName>
           <description>stream x memory 1 address
@@ -18779,115 +18509,16 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
           <size>0x20</size>
           <access>read-write</access>
           <resetValue>0x00000000</resetValue>
-          <fields>
-            <field>
-              <name>M1A</name>
-              <description>Memory 1 address (used in case of Double
-              buffer mode)</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>32</bitWidth>
-            </field>
-          </fields>
         </register>
-        <register>
+        <register derivedFrom="S0FCR">
           <name>S1FCR</name>
           <displayName>S1FCR</displayName>
           <description>stream x FIFO control register</description>
           <addressOffset>0x3C</addressOffset>
           <size>0x20</size>
           <resetValue>0x00000021</resetValue>
-          <fields>
-            <field>
-              <name>FEIE</name>
-              <description>FIFO error interrupt
-              enable</description>
-              <bitOffset>7</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-              <enumeratedValues derivedFrom="ADC_Common.CCR.TSVREFE.ENABLED">
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>FS</name>
-              <description>FIFO status</description>
-              <bitOffset>3</bitOffset>
-              <bitWidth>3</bitWidth>
-              <access>read-only</access>
-              <enumeratedValues>
-                <enumeratedValue>
-                  <name>THRESHOLD_1QUATERFULL</name>
-                  <value>0</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>THRESHOLD_HALFFULL</name>
-                  <value>1</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>THRESHOLD_3QUATERSFULL</name>
-                  <value>2</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>THRESHOLD_FULL</name>
-                  <value>3</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>EMPTY</name>
-                  <value>4</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>FULL</name>
-                  <value>5</value>
-                </enumeratedValue>
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>DMDIS</name>
-              <description>Direct mode disable</description>
-              <bitOffset>2</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-              <enumeratedValues>
-                <name>DISABLED</name>
-                <enumeratedValue>
-                  <name>ENABLE</name>
-                  <description>Enable</description>
-                  <value>0</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>DISABLE</name>
-                  <description>Disable</description>
-                  <value>1</value>
-                </enumeratedValue>
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>FTH</name>
-              <description>FIFO threshold selection</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>2</bitWidth>
-              <access>read-write</access>
-              <enumeratedValues>
-                <enumeratedValue>
-                  <name>QUATER_FULL</name>
-                  <value>0</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>HALF_FULL</name>
-                  <value>1</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>3QUATERS_FULL</name>
-                  <value>2</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>FULL</name>
-                  <value>3</value>
-                </enumeratedValue>
-              </enumeratedValues>
-            </field>
-          </fields>
         </register>
-        <register>
+        <register derivedFrom="S0CR">
           <name>S2CR</name>
           <displayName>S2CR</displayName>
           <description>stream x configuration
@@ -18896,253 +18527,8 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
           <size>0x20</size>
           <access>read-write</access>
           <resetValue>0x00000000</resetValue>
-          <fields>
-            <field>
-              <name>CHSEL</name>
-              <description>Channel selection</description>
-              <bitOffset>25</bitOffset>
-              <bitWidth>3</bitWidth>
-              <enumeratedValues>
-                <enumeratedValue>
-                  <name>CHANNEL_0</name>
-                  <value>0</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>CHANNEL_1</name>
-                  <value>1</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>CHANNEL_2</name>
-                  <value>2</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>CHANNEL_3</name>
-                  <value>3</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>CHANNEL_4</name>
-                  <value>4</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>CHANNEL_5</name>
-                  <value>5</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>CHANNEL_6</name>
-                  <value>6</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>CHANNEL_7</name>
-                  <value>7</value>
-                </enumeratedValue>
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>MBURST</name>
-              <description>Memory burst transfer
-              configuration</description>
-              <bitOffset>23</bitOffset>
-              <bitWidth>2</bitWidth>
-              <enumeratedValues>
-                <name>MBURST</name>
-                <enumeratedValue>
-                  <name>SINGLE</name>
-                  <value>0</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>INC4</name>
-                  <value>1</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>INC8</name>
-                  <value>2</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>INC16</name>
-                  <value>3</value>
-                </enumeratedValue>
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>PBURST</name>
-              <description>Peripheral burst transfer
-              configuration</description>
-              <bitOffset>21</bitOffset>
-              <bitWidth>2</bitWidth>
-              <enumeratedValues derivedFrom="MBURST">
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>CT</name>
-              <description>Current target (only in double buffer
-              mode)</description>
-              <bitOffset>19</bitOffset>
-              <bitWidth>1</bitWidth>
-            </field>
-            <field>
-              <name>DBM</name>
-              <description>Double buffer mode</description>
-              <bitOffset>18</bitOffset>
-              <bitWidth>1</bitWidth>
-            </field>
-            <field>
-              <name>PL</name>
-              <description>Priority level</description>
-              <bitOffset>16</bitOffset>
-              <bitWidth>2</bitWidth>
-              <enumeratedValues>
-                <enumeratedValue>
-                  <name>LOW</name>
-                  <value>0</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>MEDIUM</name>
-                  <value>1</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>HIGH</name>
-                  <value>2</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>VERY_HIGH</name>
-                  <value>3</value>
-                </enumeratedValue>
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>PINCOS</name>
-              <description>Peripheral increment offset
-              size</description>
-              <bitOffset>15</bitOffset>
-              <bitWidth>1</bitWidth>
-            </field>
-            <field>
-              <name>MSIZE</name>
-              <description>Memory data size</description>
-              <bitOffset>13</bitOffset>
-              <bitWidth>2</bitWidth>
-              <enumeratedValues>
-                <name>MSIZE</name>
-                <enumeratedValue>
-                  <name>BYTE</name>
-                  <value>0</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>HALF_WORD</name>
-                  <value>1</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>WORD</name>
-                  <value>2</value>
-                </enumeratedValue>
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>PSIZE</name>
-              <description>Peripheral data size</description>
-              <bitOffset>11</bitOffset>
-              <bitWidth>2</bitWidth>
-              <enumeratedValues derivedFrom="MSIZE">
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>MINC</name>
-              <description>Memory increment mode</description>
-              <bitOffset>10</bitOffset>
-              <bitWidth>1</bitWidth>
-              <enumeratedValues derivedFrom="ADC_Common.CCR.TSVREFE.ENABLED">
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>PINC</name>
-              <description>Peripheral increment mode</description>
-              <bitOffset>9</bitOffset>
-              <bitWidth>1</bitWidth>
-              <enumeratedValues derivedFrom="ADC_Common.CCR.TSVREFE.ENABLED">
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>CIRC</name>
-              <description>Circular mode</description>
-              <bitOffset>8</bitOffset>
-              <bitWidth>1</bitWidth>
-              <enumeratedValues derivedFrom="ADC_Common.CCR.TSVREFE.ENABLED">
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>DIR</name>
-              <description>Data transfer direction</description>
-              <bitOffset>6</bitOffset>
-              <bitWidth>2</bitWidth>
-              <enumeratedValues>
-                <enumeratedValue>
-                  <name>PERIPH_TO_MEMORY</name>
-                  <value>0</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>MEMORY_TO_PERIPH</name>
-                  <value>1</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>MEMORY_TO_MEMORY</name>
-                  <value>2</value>
-                </enumeratedValue>
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>PFCTRL</name>
-              <description>Peripheral flow controller</description>
-              <bitOffset>5</bitOffset>
-              <bitWidth>1</bitWidth>
-            </field>
-            <field>
-              <name>TCIE</name>
-              <description>Transfer complete interrupt
-              enable</description>
-              <bitOffset>4</bitOffset>
-              <bitWidth>1</bitWidth>
-              <enumeratedValues derivedFrom="ADC_Common.CCR.TSVREFE.ENABLED">
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>HTIE</name>
-              <description>Half transfer interrupt
-              enable</description>
-              <bitOffset>3</bitOffset>
-              <bitWidth>1</bitWidth>
-              <enumeratedValues derivedFrom="ADC_Common.CCR.TSVREFE.ENABLED">
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>TEIE</name>
-              <description>Transfer error interrupt
-              enable</description>
-              <bitOffset>2</bitOffset>
-              <bitWidth>1</bitWidth>
-              <enumeratedValues derivedFrom="ADC_Common.CCR.TSVREFE.ENABLED">
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>DMEIE</name>
-              <description>Direct mode error interrupt
-              enable</description>
-              <bitOffset>1</bitOffset>
-              <bitWidth>1</bitWidth>
-              <enumeratedValues derivedFrom="ADC_Common.CCR.TSVREFE.ENABLED">
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>EN</name>
-              <description>Stream enable / flag stream ready when
-              read low</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>1</bitWidth>
-              <enumeratedValues derivedFrom="ADC_Common.CCR.TSVREFE.ENABLED">
-              </enumeratedValues>
-            </field>
-          </fields>
         </register>
-        <register>
+        <register derivedFrom="S0NDTR">
           <name>S2NDTR</name>
           <displayName>S2NDTR</displayName>
           <description>stream x number of data
@@ -19151,17 +18537,8 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
           <size>0x20</size>
           <access>read-write</access>
           <resetValue>0x00000000</resetValue>
-          <fields>
-            <field>
-              <name>NDT</name>
-              <description>Number of data items to
-              transfer</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>16</bitWidth>
-            </field>
-          </fields>
         </register>
-        <register>
+        <register derivedFrom="S0PAR">
           <name>S2PAR</name>
           <displayName>S2PAR</displayName>
           <description>stream x peripheral address
@@ -19170,16 +18547,8 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
           <size>0x20</size>
           <access>read-write</access>
           <resetValue>0x00000000</resetValue>
-          <fields>
-            <field>
-              <name>PA</name>
-              <description>Peripheral address</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>32</bitWidth>
-            </field>
-          </fields>
         </register>
-        <register>
+        <register derivedFrom="S0M0AR">
           <name>S2M0AR</name>
           <displayName>S2M0AR</displayName>
           <description>stream x memory 0 address
@@ -19188,16 +18557,8 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
           <size>0x20</size>
           <access>read-write</access>
           <resetValue>0x00000000</resetValue>
-          <fields>
-            <field>
-              <name>M0A</name>
-              <description>Memory 0 address</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>32</bitWidth>
-            </field>
-          </fields>
         </register>
-        <register>
+        <register derivedFrom="S0M1AR">
           <name>S2M1AR</name>
           <displayName>S2M1AR</displayName>
           <description>stream x memory 1 address
@@ -19206,115 +18567,16 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
           <size>0x20</size>
           <access>read-write</access>
           <resetValue>0x00000000</resetValue>
-          <fields>
-            <field>
-              <name>M1A</name>
-              <description>Memory 1 address (used in case of Double
-              buffer mode)</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>32</bitWidth>
-            </field>
-          </fields>
         </register>
-        <register>
+        <register derivedFrom="S0FCR">
           <name>S2FCR</name>
           <displayName>S2FCR</displayName>
           <description>stream x FIFO control register</description>
           <addressOffset>0x54</addressOffset>
           <size>0x20</size>
           <resetValue>0x00000021</resetValue>
-          <fields>
-            <field>
-              <name>FEIE</name>
-              <description>FIFO error interrupt
-              enable</description>
-              <bitOffset>7</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-              <enumeratedValues derivedFrom="ADC_Common.CCR.TSVREFE.ENABLED">
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>FS</name>
-              <description>FIFO status</description>
-              <bitOffset>3</bitOffset>
-              <bitWidth>3</bitWidth>
-              <access>read-only</access>
-              <enumeratedValues>
-                <enumeratedValue>
-                  <name>THRESHOLD_1QUATERFULL</name>
-                  <value>0</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>THRESHOLD_HALFFULL</name>
-                  <value>1</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>THRESHOLD_3QUATERSFULL</name>
-                  <value>2</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>THRESHOLD_FULL</name>
-                  <value>3</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>EMPTY</name>
-                  <value>4</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>FULL</name>
-                  <value>5</value>
-                </enumeratedValue>
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>DMDIS</name>
-              <description>Direct mode disable</description>
-              <bitOffset>2</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-              <enumeratedValues>
-                <name>DISABLED</name>
-                <enumeratedValue>
-                  <name>ENABLE</name>
-                  <description>Enable</description>
-                  <value>0</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>DISABLE</name>
-                  <description>Disable</description>
-                  <value>1</value>
-                </enumeratedValue>
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>FTH</name>
-              <description>FIFO threshold selection</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>2</bitWidth>
-              <access>read-write</access>
-              <enumeratedValues>
-                <enumeratedValue>
-                  <name>QUATER_FULL</name>
-                  <value>0</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>HALF_FULL</name>
-                  <value>1</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>3QUATERS_FULL</name>
-                  <value>2</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>FULL</name>
-                  <value>3</value>
-                </enumeratedValue>
-              </enumeratedValues>
-            </field>
-          </fields>
         </register>
-        <register>
+        <register derivedFrom="S0CR">
           <name>S3CR</name>
           <displayName>S3CR</displayName>
           <description>stream x configuration
@@ -19323,253 +18585,8 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
           <size>0x20</size>
           <access>read-write</access>
           <resetValue>0x00000000</resetValue>
-          <fields>
-            <field>
-              <name>CHSEL</name>
-              <description>Channel selection</description>
-              <bitOffset>25</bitOffset>
-              <bitWidth>3</bitWidth>
-              <enumeratedValues>
-                <enumeratedValue>
-                  <name>CHANNEL_0</name>
-                  <value>0</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>CHANNEL_1</name>
-                  <value>1</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>CHANNEL_2</name>
-                  <value>2</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>CHANNEL_3</name>
-                  <value>3</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>CHANNEL_4</name>
-                  <value>4</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>CHANNEL_5</name>
-                  <value>5</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>CHANNEL_6</name>
-                  <value>6</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>CHANNEL_7</name>
-                  <value>7</value>
-                </enumeratedValue>
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>MBURST</name>
-              <description>Memory burst transfer
-              configuration</description>
-              <bitOffset>23</bitOffset>
-              <bitWidth>2</bitWidth>
-              <enumeratedValues>
-                <name>MBURST</name>
-                <enumeratedValue>
-                  <name>SINGLE</name>
-                  <value>0</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>INC4</name>
-                  <value>1</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>INC8</name>
-                  <value>2</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>INC16</name>
-                  <value>3</value>
-                </enumeratedValue>
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>PBURST</name>
-              <description>Peripheral burst transfer
-              configuration</description>
-              <bitOffset>21</bitOffset>
-              <bitWidth>2</bitWidth>
-              <enumeratedValues derivedFrom="MBURST">
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>CT</name>
-              <description>Current target (only in double buffer
-              mode)</description>
-              <bitOffset>19</bitOffset>
-              <bitWidth>1</bitWidth>
-            </field>
-            <field>
-              <name>DBM</name>
-              <description>Double buffer mode</description>
-              <bitOffset>18</bitOffset>
-              <bitWidth>1</bitWidth>
-            </field>
-            <field>
-              <name>PL</name>
-              <description>Priority level</description>
-              <bitOffset>16</bitOffset>
-              <bitWidth>2</bitWidth>
-              <enumeratedValues>
-                <enumeratedValue>
-                  <name>LOW</name>
-                  <value>0</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>MEDIUM</name>
-                  <value>1</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>HIGH</name>
-                  <value>2</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>VERY_HIGH</name>
-                  <value>3</value>
-                </enumeratedValue>
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>PINCOS</name>
-              <description>Peripheral increment offset
-              size</description>
-              <bitOffset>15</bitOffset>
-              <bitWidth>1</bitWidth>
-            </field>
-            <field>
-              <name>MSIZE</name>
-              <description>Memory data size</description>
-              <bitOffset>13</bitOffset>
-              <bitWidth>2</bitWidth>
-              <enumeratedValues>
-                <name>MSIZE</name>
-                <enumeratedValue>
-                  <name>BYTE</name>
-                  <value>0</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>HALF_WORD</name>
-                  <value>1</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>WORD</name>
-                  <value>2</value>
-                </enumeratedValue>
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>PSIZE</name>
-              <description>Peripheral data size</description>
-              <bitOffset>11</bitOffset>
-              <bitWidth>2</bitWidth>
-              <enumeratedValues derivedFrom="MSIZE">
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>MINC</name>
-              <description>Memory increment mode</description>
-              <bitOffset>10</bitOffset>
-              <bitWidth>1</bitWidth>
-              <enumeratedValues derivedFrom="ADC_Common.CCR.TSVREFE.ENABLED">
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>PINC</name>
-              <description>Peripheral increment mode</description>
-              <bitOffset>9</bitOffset>
-              <bitWidth>1</bitWidth>
-              <enumeratedValues derivedFrom="ADC_Common.CCR.TSVREFE.ENABLED">
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>CIRC</name>
-              <description>Circular mode</description>
-              <bitOffset>8</bitOffset>
-              <bitWidth>1</bitWidth>
-              <enumeratedValues derivedFrom="ADC_Common.CCR.TSVREFE.ENABLED">
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>DIR</name>
-              <description>Data transfer direction</description>
-              <bitOffset>6</bitOffset>
-              <bitWidth>2</bitWidth>
-              <enumeratedValues>
-                <enumeratedValue>
-                  <name>PERIPH_TO_MEMORY</name>
-                  <value>0</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>MEMORY_TO_PERIPH</name>
-                  <value>1</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>MEMORY_TO_MEMORY</name>
-                  <value>2</value>
-                </enumeratedValue>
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>PFCTRL</name>
-              <description>Peripheral flow controller</description>
-              <bitOffset>5</bitOffset>
-              <bitWidth>1</bitWidth>
-            </field>
-            <field>
-              <name>TCIE</name>
-              <description>Transfer complete interrupt
-              enable</description>
-              <bitOffset>4</bitOffset>
-              <bitWidth>1</bitWidth>
-              <enumeratedValues derivedFrom="ADC_Common.CCR.TSVREFE.ENABLED">
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>HTIE</name>
-              <description>Half transfer interrupt
-              enable</description>
-              <bitOffset>3</bitOffset>
-              <bitWidth>1</bitWidth>
-              <enumeratedValues derivedFrom="ADC_Common.CCR.TSVREFE.ENABLED">
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>TEIE</name>
-              <description>Transfer error interrupt
-              enable</description>
-              <bitOffset>2</bitOffset>
-              <bitWidth>1</bitWidth>
-              <enumeratedValues derivedFrom="ADC_Common.CCR.TSVREFE.ENABLED">
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>DMEIE</name>
-              <description>Direct mode error interrupt
-              enable</description>
-              <bitOffset>1</bitOffset>
-              <bitWidth>1</bitWidth>
-              <enumeratedValues derivedFrom="ADC_Common.CCR.TSVREFE.ENABLED">
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>EN</name>
-              <description>Stream enable / flag stream ready when
-              read low</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>1</bitWidth>
-              <enumeratedValues derivedFrom="ADC_Common.CCR.TSVREFE.ENABLED">
-              </enumeratedValues>
-            </field>
-          </fields>
         </register>
-        <register>
+        <register derivedFrom="S0NDTR">
           <name>S3NDTR</name>
           <displayName>S3NDTR</displayName>
           <description>stream x number of data
@@ -19578,17 +18595,8 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
           <size>0x20</size>
           <access>read-write</access>
           <resetValue>0x00000000</resetValue>
-          <fields>
-            <field>
-              <name>NDT</name>
-              <description>Number of data items to
-              transfer</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>16</bitWidth>
-            </field>
-          </fields>
         </register>
-        <register>
+        <register derivedFrom="S0PAR">
           <name>S3PAR</name>
           <displayName>S3PAR</displayName>
           <description>stream x peripheral address
@@ -19597,16 +18605,8 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
           <size>0x20</size>
           <access>read-write</access>
           <resetValue>0x00000000</resetValue>
-          <fields>
-            <field>
-              <name>PA</name>
-              <description>Peripheral address</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>32</bitWidth>
-            </field>
-          </fields>
-        </register>
-        <register>
+          </register>
+        <register derivedFrom="S0M0AR">
           <name>S3M0AR</name>
           <displayName>S3M0AR</displayName>
           <description>stream x memory 0 address
@@ -19615,16 +18615,8 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
           <size>0x20</size>
           <access>read-write</access>
           <resetValue>0x00000000</resetValue>
-          <fields>
-            <field>
-              <name>M0A</name>
-              <description>Memory 0 address</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>32</bitWidth>
-            </field>
-          </fields>
         </register>
-        <register>
+        <register derivedFrom="S0M1AR">
           <name>S3M1AR</name>
           <displayName>S3M1AR</displayName>
           <description>stream x memory 1 address
@@ -19633,115 +18625,16 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
           <size>0x20</size>
           <access>read-write</access>
           <resetValue>0x00000000</resetValue>
-          <fields>
-            <field>
-              <name>M1A</name>
-              <description>Memory 1 address (used in case of Double
-              buffer mode)</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>32</bitWidth>
-            </field>
-          </fields>
         </register>
-        <register>
+        <register derivedFrom="S0FCR">
           <name>S3FCR</name>
           <displayName>S3FCR</displayName>
           <description>stream x FIFO control register</description>
           <addressOffset>0x6C</addressOffset>
           <size>0x20</size>
           <resetValue>0x00000021</resetValue>
-          <fields>
-            <field>
-              <name>FEIE</name>
-              <description>FIFO error interrupt
-              enable</description>
-              <bitOffset>7</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-              <enumeratedValues derivedFrom="ADC_Common.CCR.TSVREFE.ENABLED">
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>FS</name>
-              <description>FIFO status</description>
-              <bitOffset>3</bitOffset>
-              <bitWidth>3</bitWidth>
-              <access>read-only</access>
-              <enumeratedValues>
-                <enumeratedValue>
-                  <name>THRESHOLD_1QUATERFULL</name>
-                  <value>0</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>THRESHOLD_HALFFULL</name>
-                  <value>1</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>THRESHOLD_3QUATERSFULL</name>
-                  <value>2</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>THRESHOLD_FULL</name>
-                  <value>3</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>EMPTY</name>
-                  <value>4</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>FULL</name>
-                  <value>5</value>
-                </enumeratedValue>
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>DMDIS</name>
-              <description>Direct mode disable</description>
-              <bitOffset>2</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-              <enumeratedValues>
-                <name>DISABLED</name>
-                <enumeratedValue>
-                  <name>ENABLE</name>
-                  <description>Enable</description>
-                  <value>0</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>DISABLE</name>
-                  <description>Disable</description>
-                  <value>1</value>
-                </enumeratedValue>
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>FTH</name>
-              <description>FIFO threshold selection</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>2</bitWidth>
-              <access>read-write</access>
-              <enumeratedValues>
-                <enumeratedValue>
-                  <name>QUATER_FULL</name>
-                  <value>0</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>HALF_FULL</name>
-                  <value>1</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>3QUATERS_FULL</name>
-                  <value>2</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>FULL</name>
-                  <value>3</value>
-                </enumeratedValue>
-              </enumeratedValues>
-            </field>
-          </fields>
         </register>
-        <register>
+        <register derivedFrom="S0CR">
           <name>S4CR</name>
           <displayName>S4CR</displayName>
           <description>stream x configuration
@@ -19750,253 +18643,8 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
           <size>0x20</size>
           <access>read-write</access>
           <resetValue>0x00000000</resetValue>
-          <fields>
-            <field>
-              <name>CHSEL</name>
-              <description>Channel selection</description>
-              <bitOffset>25</bitOffset>
-              <bitWidth>3</bitWidth>
-              <enumeratedValues>
-                <enumeratedValue>
-                  <name>CHANNEL_0</name>
-                  <value>0</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>CHANNEL_1</name>
-                  <value>1</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>CHANNEL_2</name>
-                  <value>2</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>CHANNEL_3</name>
-                  <value>3</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>CHANNEL_4</name>
-                  <value>4</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>CHANNEL_5</name>
-                  <value>5</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>CHANNEL_6</name>
-                  <value>6</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>CHANNEL_7</name>
-                  <value>7</value>
-                </enumeratedValue>
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>MBURST</name>
-              <description>Memory burst transfer
-              configuration</description>
-              <bitOffset>23</bitOffset>
-              <bitWidth>2</bitWidth>
-              <enumeratedValues>
-                <name>MBURST</name>
-                <enumeratedValue>
-                  <name>SINGLE</name>
-                  <value>0</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>INC4</name>
-                  <value>1</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>INC8</name>
-                  <value>2</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>INC16</name>
-                  <value>3</value>
-                </enumeratedValue>
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>PBURST</name>
-              <description>Peripheral burst transfer
-              configuration</description>
-              <bitOffset>21</bitOffset>
-              <bitWidth>2</bitWidth>
-              <enumeratedValues derivedFrom="MBURST">
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>CT</name>
-              <description>Current target (only in double buffer
-              mode)</description>
-              <bitOffset>19</bitOffset>
-              <bitWidth>1</bitWidth>
-            </field>
-            <field>
-              <name>DBM</name>
-              <description>Double buffer mode</description>
-              <bitOffset>18</bitOffset>
-              <bitWidth>1</bitWidth>
-            </field>
-            <field>
-              <name>PL</name>
-              <description>Priority level</description>
-              <bitOffset>16</bitOffset>
-              <bitWidth>2</bitWidth>
-              <enumeratedValues>
-                <enumeratedValue>
-                  <name>LOW</name>
-                  <value>0</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>MEDIUM</name>
-                  <value>1</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>HIGH</name>
-                  <value>2</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>VERY_HIGH</name>
-                  <value>3</value>
-                </enumeratedValue>
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>PINCOS</name>
-              <description>Peripheral increment offset
-              size</description>
-              <bitOffset>15</bitOffset>
-              <bitWidth>1</bitWidth>
-            </field>
-            <field>
-              <name>MSIZE</name>
-              <description>Memory data size</description>
-              <bitOffset>13</bitOffset>
-              <bitWidth>2</bitWidth>
-              <enumeratedValues>
-                <name>MSIZE</name>
-                <enumeratedValue>
-                  <name>BYTE</name>
-                  <value>0</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>HALF_WORD</name>
-                  <value>1</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>WORD</name>
-                  <value>2</value>
-                </enumeratedValue>
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>PSIZE</name>
-              <description>Peripheral data size</description>
-              <bitOffset>11</bitOffset>
-              <bitWidth>2</bitWidth>
-              <enumeratedValues derivedFrom="MSIZE">
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>MINC</name>
-              <description>Memory increment mode</description>
-              <bitOffset>10</bitOffset>
-              <bitWidth>1</bitWidth>
-              <enumeratedValues derivedFrom="ADC_Common.CCR.TSVREFE.ENABLED">
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>PINC</name>
-              <description>Peripheral increment mode</description>
-              <bitOffset>9</bitOffset>
-              <bitWidth>1</bitWidth>
-              <enumeratedValues derivedFrom="ADC_Common.CCR.TSVREFE.ENABLED">
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>CIRC</name>
-              <description>Circular mode</description>
-              <bitOffset>8</bitOffset>
-              <bitWidth>1</bitWidth>
-              <enumeratedValues derivedFrom="ADC_Common.CCR.TSVREFE.ENABLED">
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>DIR</name>
-              <description>Data transfer direction</description>
-              <bitOffset>6</bitOffset>
-              <bitWidth>2</bitWidth>
-              <enumeratedValues>
-                <enumeratedValue>
-                  <name>PERIPH_TO_MEMORY</name>
-                  <value>0</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>MEMORY_TO_PERIPH</name>
-                  <value>1</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>MEMORY_TO_MEMORY</name>
-                  <value>2</value>
-                </enumeratedValue>
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>PFCTRL</name>
-              <description>Peripheral flow controller</description>
-              <bitOffset>5</bitOffset>
-              <bitWidth>1</bitWidth>
-            </field>
-            <field>
-              <name>TCIE</name>
-              <description>Transfer complete interrupt
-              enable</description>
-              <bitOffset>4</bitOffset>
-              <bitWidth>1</bitWidth>
-              <enumeratedValues derivedFrom="ADC_Common.CCR.TSVREFE.ENABLED">
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>HTIE</name>
-              <description>Half transfer interrupt
-              enable</description>
-              <bitOffset>3</bitOffset>
-              <bitWidth>1</bitWidth>
-              <enumeratedValues derivedFrom="ADC_Common.CCR.TSVREFE.ENABLED">
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>TEIE</name>
-              <description>Transfer error interrupt
-              enable</description>
-              <bitOffset>2</bitOffset>
-              <bitWidth>1</bitWidth>
-              <enumeratedValues derivedFrom="ADC_Common.CCR.TSVREFE.ENABLED">
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>DMEIE</name>
-              <description>Direct mode error interrupt
-              enable</description>
-              <bitOffset>1</bitOffset>
-              <bitWidth>1</bitWidth>
-              <enumeratedValues derivedFrom="ADC_Common.CCR.TSVREFE.ENABLED">
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>EN</name>
-              <description>Stream enable / flag stream ready when
-              read low</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>1</bitWidth>
-              <enumeratedValues derivedFrom="ADC_Common.CCR.TSVREFE.ENABLED">
-              </enumeratedValues>
-            </field>
-          </fields>
         </register>
-        <register>
+        <register derivedFrom="S0NDTR">
           <name>S4NDTR</name>
           <displayName>S4NDTR</displayName>
           <description>stream x number of data
@@ -20005,17 +18653,8 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
           <size>0x20</size>
           <access>read-write</access>
           <resetValue>0x00000000</resetValue>
-          <fields>
-            <field>
-              <name>NDT</name>
-              <description>Number of data items to
-              transfer</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>16</bitWidth>
-            </field>
-          </fields>
         </register>
-        <register>
+        <register derivedFrom="S0PAR">
           <name>S4PAR</name>
           <displayName>S4PAR</displayName>
           <description>stream x peripheral address
@@ -20024,16 +18663,8 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
           <size>0x20</size>
           <access>read-write</access>
           <resetValue>0x00000000</resetValue>
-          <fields>
-            <field>
-              <name>PA</name>
-              <description>Peripheral address</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>32</bitWidth>
-            </field>
-          </fields>
         </register>
-        <register>
+        <register derivedFrom="S0M0AR">
           <name>S4M0AR</name>
           <displayName>S4M0AR</displayName>
           <description>stream x memory 0 address
@@ -20042,16 +18673,8 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
           <size>0x20</size>
           <access>read-write</access>
           <resetValue>0x00000000</resetValue>
-          <fields>
-            <field>
-              <name>M0A</name>
-              <description>Memory 0 address</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>32</bitWidth>
-            </field>
-          </fields>
         </register>
-        <register>
+        <register derivedFrom="S0M1AR">
           <name>S4M1AR</name>
           <displayName>S4M1AR</displayName>
           <description>stream x memory 1 address
@@ -20060,115 +18683,16 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
           <size>0x20</size>
           <access>read-write</access>
           <resetValue>0x00000000</resetValue>
-          <fields>
-            <field>
-              <name>M1A</name>
-              <description>Memory 1 address (used in case of Double
-              buffer mode)</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>32</bitWidth>
-            </field>
-          </fields>
         </register>
-        <register>
+        <register derivedFrom="S0FCR">
           <name>S4FCR</name>
           <displayName>S4FCR</displayName>
           <description>stream x FIFO control register</description>
           <addressOffset>0x84</addressOffset>
           <size>0x20</size>
           <resetValue>0x00000021</resetValue>
-          <fields>
-            <field>
-              <name>FEIE</name>
-              <description>FIFO error interrupt
-              enable</description>
-              <bitOffset>7</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-              <enumeratedValues derivedFrom="ADC_Common.CCR.TSVREFE.ENABLED">
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>FS</name>
-              <description>FIFO status</description>
-              <bitOffset>3</bitOffset>
-              <bitWidth>3</bitWidth>
-              <access>read-only</access>
-              <enumeratedValues>
-                <enumeratedValue>
-                  <name>THRESHOLD_1QUATERFULL</name>
-                  <value>0</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>THRESHOLD_HALFFULL</name>
-                  <value>1</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>THRESHOLD_3QUATERSFULL</name>
-                  <value>2</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>THRESHOLD_FULL</name>
-                  <value>3</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>EMPTY</name>
-                  <value>4</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>FULL</name>
-                  <value>5</value>
-                </enumeratedValue>
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>DMDIS</name>
-              <description>Direct mode disable</description>
-              <bitOffset>2</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-              <enumeratedValues>
-                <name>DISABLED</name>
-                <enumeratedValue>
-                  <name>ENABLE</name>
-                  <description>Enable</description>
-                  <value>0</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>DISABLE</name>
-                  <description>Disable</description>
-                  <value>1</value>
-                </enumeratedValue>
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>FTH</name>
-              <description>FIFO threshold selection</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>2</bitWidth>
-              <access>read-write</access>
-              <enumeratedValues>
-                <enumeratedValue>
-                  <name>QUATER_FULL</name>
-                  <value>0</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>HALF_FULL</name>
-                  <value>1</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>3QUATERS_FULL</name>
-                  <value>2</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>FULL</name>
-                  <value>3</value>
-                </enumeratedValue>
-              </enumeratedValues>
-            </field>
-          </fields>
         </register>
-        <register>
+        <register derivedFrom="S0CR">
           <name>S5CR</name>
           <displayName>S5CR</displayName>
           <description>stream x configuration
@@ -20177,253 +18701,8 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
           <size>0x20</size>
           <access>read-write</access>
           <resetValue>0x00000000</resetValue>
-          <fields>
-            <field>
-              <name>CHSEL</name>
-              <description>Channel selection</description>
-              <bitOffset>25</bitOffset>
-              <bitWidth>3</bitWidth>
-              <enumeratedValues>
-                <enumeratedValue>
-                  <name>CHANNEL_0</name>
-                  <value>0</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>CHANNEL_1</name>
-                  <value>1</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>CHANNEL_2</name>
-                  <value>2</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>CHANNEL_3</name>
-                  <value>3</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>CHANNEL_4</name>
-                  <value>4</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>CHANNEL_5</name>
-                  <value>5</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>CHANNEL_6</name>
-                  <value>6</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>CHANNEL_7</name>
-                  <value>7</value>
-                </enumeratedValue>
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>MBURST</name>
-              <description>Memory burst transfer
-              configuration</description>
-              <bitOffset>23</bitOffset>
-              <bitWidth>2</bitWidth>
-              <enumeratedValues>
-                <name>MBURST</name>
-                <enumeratedValue>
-                  <name>SINGLE</name>
-                  <value>0</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>INC4</name>
-                  <value>1</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>INC8</name>
-                  <value>2</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>INC16</name>
-                  <value>3</value>
-                </enumeratedValue>
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>PBURST</name>
-              <description>Peripheral burst transfer
-              configuration</description>
-              <bitOffset>21</bitOffset>
-              <bitWidth>2</bitWidth>
-              <enumeratedValues derivedFrom="MBURST">
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>CT</name>
-              <description>Current target (only in double buffer
-              mode)</description>
-              <bitOffset>19</bitOffset>
-              <bitWidth>1</bitWidth>
-            </field>
-            <field>
-              <name>DBM</name>
-              <description>Double buffer mode</description>
-              <bitOffset>18</bitOffset>
-              <bitWidth>1</bitWidth>
-            </field>
-            <field>
-              <name>PL</name>
-              <description>Priority level</description>
-              <bitOffset>16</bitOffset>
-              <bitWidth>2</bitWidth>
-              <enumeratedValues>
-                <enumeratedValue>
-                  <name>LOW</name>
-                  <value>0</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>MEDIUM</name>
-                  <value>1</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>HIGH</name>
-                  <value>2</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>VERY_HIGH</name>
-                  <value>3</value>
-                </enumeratedValue>
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>PINCOS</name>
-              <description>Peripheral increment offset
-              size</description>
-              <bitOffset>15</bitOffset>
-              <bitWidth>1</bitWidth>
-            </field>
-            <field>
-              <name>MSIZE</name>
-              <description>Memory data size</description>
-              <bitOffset>13</bitOffset>
-              <bitWidth>2</bitWidth>
-              <enumeratedValues>
-                <name>MSIZE</name>
-                <enumeratedValue>
-                  <name>BYTE</name>
-                  <value>0</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>HALF_WORD</name>
-                  <value>1</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>WORD</name>
-                  <value>2</value>
-                </enumeratedValue>
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>PSIZE</name>
-              <description>Peripheral data size</description>
-              <bitOffset>11</bitOffset>
-              <bitWidth>2</bitWidth>
-              <enumeratedValues derivedFrom="MSIZE">
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>MINC</name>
-              <description>Memory increment mode</description>
-              <bitOffset>10</bitOffset>
-              <bitWidth>1</bitWidth>
-              <enumeratedValues derivedFrom="ADC_Common.CCR.TSVREFE.ENABLED">
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>PINC</name>
-              <description>Peripheral increment mode</description>
-              <bitOffset>9</bitOffset>
-              <bitWidth>1</bitWidth>
-              <enumeratedValues derivedFrom="ADC_Common.CCR.TSVREFE.ENABLED">
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>CIRC</name>
-              <description>Circular mode</description>
-              <bitOffset>8</bitOffset>
-              <bitWidth>1</bitWidth>
-              <enumeratedValues derivedFrom="ADC_Common.CCR.TSVREFE.ENABLED">
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>DIR</name>
-              <description>Data transfer direction</description>
-              <bitOffset>6</bitOffset>
-              <bitWidth>2</bitWidth>
-              <enumeratedValues>
-                <enumeratedValue>
-                  <name>PERIPH_TO_MEMORY</name>
-                  <value>0</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>MEMORY_TO_PERIPH</name>
-                  <value>1</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>MEMORY_TO_MEMORY</name>
-                  <value>2</value>
-                </enumeratedValue>
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>PFCTRL</name>
-              <description>Peripheral flow controller</description>
-              <bitOffset>5</bitOffset>
-              <bitWidth>1</bitWidth>
-            </field>
-            <field>
-              <name>TCIE</name>
-              <description>Transfer complete interrupt
-              enable</description>
-              <bitOffset>4</bitOffset>
-              <bitWidth>1</bitWidth>
-              <enumeratedValues derivedFrom="ADC_Common.CCR.TSVREFE.ENABLED">
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>HTIE</name>
-              <description>Half transfer interrupt
-              enable</description>
-              <bitOffset>3</bitOffset>
-              <bitWidth>1</bitWidth>
-              <enumeratedValues derivedFrom="ADC_Common.CCR.TSVREFE.ENABLED">
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>TEIE</name>
-              <description>Transfer error interrupt
-              enable</description>
-              <bitOffset>2</bitOffset>
-              <bitWidth>1</bitWidth>
-              <enumeratedValues derivedFrom="ADC_Common.CCR.TSVREFE.ENABLED">
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>DMEIE</name>
-              <description>Direct mode error interrupt
-              enable</description>
-              <bitOffset>1</bitOffset>
-              <bitWidth>1</bitWidth>
-              <enumeratedValues derivedFrom="ADC_Common.CCR.TSVREFE.ENABLED">
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>EN</name>
-              <description>Stream enable / flag stream ready when
-              read low</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>1</bitWidth>
-              <enumeratedValues derivedFrom="ADC_Common.CCR.TSVREFE.ENABLED">
-              </enumeratedValues>
-            </field>
-          </fields>
         </register>
-        <register>
+        <register derivedFrom="S0NDTR">
           <name>S5NDTR</name>
           <displayName>S5NDTR</displayName>
           <description>stream x number of data
@@ -20432,17 +18711,8 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
           <size>0x20</size>
           <access>read-write</access>
           <resetValue>0x00000000</resetValue>
-          <fields>
-            <field>
-              <name>NDT</name>
-              <description>Number of data items to
-              transfer</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>16</bitWidth>
-            </field>
-          </fields>
         </register>
-        <register>
+        <register derivedFrom="S0PAR">
           <name>S5PAR</name>
           <displayName>S5PAR</displayName>
           <description>stream x peripheral address
@@ -20451,16 +18721,8 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
           <size>0x20</size>
           <access>read-write</access>
           <resetValue>0x00000000</resetValue>
-          <fields>
-            <field>
-              <name>PA</name>
-              <description>Peripheral address</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>32</bitWidth>
-            </field>
-          </fields>
         </register>
-        <register>
+        <register derivedFrom="S0M0AR">
           <name>S5M0AR</name>
           <displayName>S5M0AR</displayName>
           <description>stream x memory 0 address
@@ -20469,16 +18731,8 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
           <size>0x20</size>
           <access>read-write</access>
           <resetValue>0x00000000</resetValue>
-          <fields>
-            <field>
-              <name>M0A</name>
-              <description>Memory 0 address</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>32</bitWidth>
-            </field>
-          </fields>
         </register>
-        <register>
+        <register derivedFrom="S0M1AR">
           <name>S5M1AR</name>
           <displayName>S5M1AR</displayName>
           <description>stream x memory 1 address
@@ -20487,115 +18741,16 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
           <size>0x20</size>
           <access>read-write</access>
           <resetValue>0x00000000</resetValue>
-          <fields>
-            <field>
-              <name>M1A</name>
-              <description>Memory 1 address (used in case of Double
-              buffer mode)</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>32</bitWidth>
-            </field>
-          </fields>
         </register>
-        <register>
+        <register derivedFrom="S0FCR">
           <name>S5FCR</name>
           <displayName>S5FCR</displayName>
           <description>stream x FIFO control register</description>
           <addressOffset>0x9C</addressOffset>
           <size>0x20</size>
           <resetValue>0x00000021</resetValue>
-          <fields>
-            <field>
-              <name>FEIE</name>
-              <description>FIFO error interrupt
-              enable</description>
-              <bitOffset>7</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-              <enumeratedValues derivedFrom="ADC_Common.CCR.TSVREFE.ENABLED">
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>FS</name>
-              <description>FIFO status</description>
-              <bitOffset>3</bitOffset>
-              <bitWidth>3</bitWidth>
-              <access>read-only</access>
-              <enumeratedValues>
-                <enumeratedValue>
-                  <name>THRESHOLD_1QUATERFULL</name>
-                  <value>0</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>THRESHOLD_HALFFULL</name>
-                  <value>1</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>THRESHOLD_3QUATERSFULL</name>
-                  <value>2</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>THRESHOLD_FULL</name>
-                  <value>3</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>EMPTY</name>
-                  <value>4</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>FULL</name>
-                  <value>5</value>
-                </enumeratedValue>
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>DMDIS</name>
-              <description>Direct mode disable</description>
-              <bitOffset>2</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-              <enumeratedValues>
-                <name>DISABLED</name>
-                <enumeratedValue>
-                  <name>ENABLE</name>
-                  <description>Enable</description>
-                  <value>0</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>DISABLE</name>
-                  <description>Disable</description>
-                  <value>1</value>
-                </enumeratedValue>
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>FTH</name>
-              <description>FIFO threshold selection</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>2</bitWidth>
-              <access>read-write</access>
-              <enumeratedValues>
-                <enumeratedValue>
-                  <name>QUATER_FULL</name>
-                  <value>0</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>HALF_FULL</name>
-                  <value>1</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>3QUATERS_FULL</name>
-                  <value>2</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>FULL</name>
-                  <value>3</value>
-                </enumeratedValue>
-              </enumeratedValues>
-            </field>
-          </fields>
         </register>
-        <register>
+        <register derivedFrom="S0CR">
           <name>S6CR</name>
           <displayName>S6CR</displayName>
           <description>stream x configuration
@@ -20604,253 +18759,8 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
           <size>0x20</size>
           <access>read-write</access>
           <resetValue>0x00000000</resetValue>
-          <fields>
-            <field>
-              <name>CHSEL</name>
-              <description>Channel selection</description>
-              <bitOffset>25</bitOffset>
-              <bitWidth>3</bitWidth>
-              <enumeratedValues>
-                <enumeratedValue>
-                  <name>CHANNEL_0</name>
-                  <value>0</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>CHANNEL_1</name>
-                  <value>1</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>CHANNEL_2</name>
-                  <value>2</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>CHANNEL_3</name>
-                  <value>3</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>CHANNEL_4</name>
-                  <value>4</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>CHANNEL_5</name>
-                  <value>5</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>CHANNEL_6</name>
-                  <value>6</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>CHANNEL_7</name>
-                  <value>7</value>
-                </enumeratedValue>
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>MBURST</name>
-              <description>Memory burst transfer
-              configuration</description>
-              <bitOffset>23</bitOffset>
-              <bitWidth>2</bitWidth>
-              <enumeratedValues>
-                <name>MBURST</name>
-                <enumeratedValue>
-                  <name>SINGLE</name>
-                  <value>0</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>INC4</name>
-                  <value>1</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>INC8</name>
-                  <value>2</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>INC16</name>
-                  <value>3</value>
-                </enumeratedValue>
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>PBURST</name>
-              <description>Peripheral burst transfer
-              configuration</description>
-              <bitOffset>21</bitOffset>
-              <bitWidth>2</bitWidth>
-              <enumeratedValues derivedFrom="MBURST">
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>CT</name>
-              <description>Current target (only in double buffer
-              mode)</description>
-              <bitOffset>19</bitOffset>
-              <bitWidth>1</bitWidth>
-            </field>
-            <field>
-              <name>DBM</name>
-              <description>Double buffer mode</description>
-              <bitOffset>18</bitOffset>
-              <bitWidth>1</bitWidth>
-            </field>
-            <field>
-              <name>PL</name>
-              <description>Priority level</description>
-              <bitOffset>16</bitOffset>
-              <bitWidth>2</bitWidth>
-              <enumeratedValues>
-                <enumeratedValue>
-                  <name>LOW</name>
-                  <value>0</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>MEDIUM</name>
-                  <value>1</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>HIGH</name>
-                  <value>2</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>VERY_HIGH</name>
-                  <value>3</value>
-                </enumeratedValue>
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>PINCOS</name>
-              <description>Peripheral increment offset
-              size</description>
-              <bitOffset>15</bitOffset>
-              <bitWidth>1</bitWidth>
-            </field>
-            <field>
-              <name>MSIZE</name>
-              <description>Memory data size</description>
-              <bitOffset>13</bitOffset>
-              <bitWidth>2</bitWidth>
-              <enumeratedValues>
-                <name>MSIZE</name>
-                <enumeratedValue>
-                  <name>BYTE</name>
-                  <value>0</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>HALF_WORD</name>
-                  <value>1</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>WORD</name>
-                  <value>2</value>
-                </enumeratedValue>
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>PSIZE</name>
-              <description>Peripheral data size</description>
-              <bitOffset>11</bitOffset>
-              <bitWidth>2</bitWidth>
-              <enumeratedValues derivedFrom="MSIZE">
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>MINC</name>
-              <description>Memory increment mode</description>
-              <bitOffset>10</bitOffset>
-              <bitWidth>1</bitWidth>
-              <enumeratedValues derivedFrom="ADC_Common.CCR.TSVREFE.ENABLED">
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>PINC</name>
-              <description>Peripheral increment mode</description>
-              <bitOffset>9</bitOffset>
-              <bitWidth>1</bitWidth>
-              <enumeratedValues derivedFrom="ADC_Common.CCR.TSVREFE.ENABLED">
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>CIRC</name>
-              <description>Circular mode</description>
-              <bitOffset>8</bitOffset>
-              <bitWidth>1</bitWidth>
-              <enumeratedValues derivedFrom="ADC_Common.CCR.TSVREFE.ENABLED">
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>DIR</name>
-              <description>Data transfer direction</description>
-              <bitOffset>6</bitOffset>
-              <bitWidth>2</bitWidth>
-              <enumeratedValues>
-                <enumeratedValue>
-                  <name>PERIPH_TO_MEMORY</name>
-                  <value>0</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>MEMORY_TO_PERIPH</name>
-                  <value>1</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>MEMORY_TO_MEMORY</name>
-                  <value>2</value>
-                </enumeratedValue>
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>PFCTRL</name>
-              <description>Peripheral flow controller</description>
-              <bitOffset>5</bitOffset>
-              <bitWidth>1</bitWidth>
-            </field>
-            <field>
-              <name>TCIE</name>
-              <description>Transfer complete interrupt
-              enable</description>
-              <bitOffset>4</bitOffset>
-              <bitWidth>1</bitWidth>
-              <enumeratedValues derivedFrom="ADC_Common.CCR.TSVREFE.ENABLED">
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>HTIE</name>
-              <description>Half transfer interrupt
-              enable</description>
-              <bitOffset>3</bitOffset>
-              <bitWidth>1</bitWidth>
-              <enumeratedValues derivedFrom="ADC_Common.CCR.TSVREFE.ENABLED">
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>TEIE</name>
-              <description>Transfer error interrupt
-              enable</description>
-              <bitOffset>2</bitOffset>
-              <bitWidth>1</bitWidth>
-              <enumeratedValues derivedFrom="ADC_Common.CCR.TSVREFE.ENABLED">
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>DMEIE</name>
-              <description>Direct mode error interrupt
-              enable</description>
-              <bitOffset>1</bitOffset>
-              <bitWidth>1</bitWidth>
-              <enumeratedValues derivedFrom="ADC_Common.CCR.TSVREFE.ENABLED">
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>EN</name>
-              <description>Stream enable / flag stream ready when
-              read low</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>1</bitWidth>
-              <enumeratedValues derivedFrom="ADC_Common.CCR.TSVREFE.ENABLED">
-              </enumeratedValues>
-            </field>
-          </fields>
         </register>
-        <register>
+        <register derivedFrom="S0NDTR">
           <name>S6NDTR</name>
           <displayName>S6NDTR</displayName>
           <description>stream x number of data
@@ -20859,17 +18769,8 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
           <size>0x20</size>
           <access>read-write</access>
           <resetValue>0x00000000</resetValue>
-          <fields>
-            <field>
-              <name>NDT</name>
-              <description>Number of data items to
-              transfer</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>16</bitWidth>
-            </field>
-          </fields>
         </register>
-        <register>
+        <register derivedFrom="S0PAR">
           <name>S6PAR</name>
           <displayName>S6PAR</displayName>
           <description>stream x peripheral address
@@ -20878,16 +18779,8 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
           <size>0x20</size>
           <access>read-write</access>
           <resetValue>0x00000000</resetValue>
-          <fields>
-            <field>
-              <name>PA</name>
-              <description>Peripheral address</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>32</bitWidth>
-            </field>
-          </fields>
         </register>
-        <register>
+        <register derivedFrom="S0M0AR">
           <name>S6M0AR</name>
           <displayName>S6M0AR</displayName>
           <description>stream x memory 0 address
@@ -20896,16 +18789,8 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
           <size>0x20</size>
           <access>read-write</access>
           <resetValue>0x00000000</resetValue>
-          <fields>
-            <field>
-              <name>M0A</name>
-              <description>Memory 0 address</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>32</bitWidth>
-            </field>
-          </fields>
         </register>
-        <register>
+        <register derivedFrom="S0M1AR">
           <name>S6M1AR</name>
           <displayName>S6M1AR</displayName>
           <description>stream x memory 1 address
@@ -20914,115 +18799,16 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
           <size>0x20</size>
           <access>read-write</access>
           <resetValue>0x00000000</resetValue>
-          <fields>
-            <field>
-              <name>M1A</name>
-              <description>Memory 1 address (used in case of Double
-              buffer mode)</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>32</bitWidth>
-            </field>
-          </fields>
         </register>
-        <register>
+        <register derivedFrom="S0FCR">
           <name>S6FCR</name>
           <displayName>S6FCR</displayName>
           <description>stream x FIFO control register</description>
           <addressOffset>0xB4</addressOffset>
           <size>0x20</size>
           <resetValue>0x00000021</resetValue>
-          <fields>
-            <field>
-              <name>FEIE</name>
-              <description>FIFO error interrupt
-              enable</description>
-              <bitOffset>7</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-              <enumeratedValues derivedFrom="ADC_Common.CCR.TSVREFE.ENABLED">
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>FS</name>
-              <description>FIFO status</description>
-              <bitOffset>3</bitOffset>
-              <bitWidth>3</bitWidth>
-              <access>read-only</access>
-              <enumeratedValues>
-                <enumeratedValue>
-                  <name>THRESHOLD_1QUATERFULL</name>
-                  <value>0</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>THRESHOLD_HALFFULL</name>
-                  <value>1</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>THRESHOLD_3QUATERSFULL</name>
-                  <value>2</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>THRESHOLD_FULL</name>
-                  <value>3</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>EMPTY</name>
-                  <value>4</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>FULL</name>
-                  <value>5</value>
-                </enumeratedValue>
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>DMDIS</name>
-              <description>Direct mode disable</description>
-              <bitOffset>2</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-              <enumeratedValues>
-                <name>DISABLED</name>
-                <enumeratedValue>
-                  <name>ENABLE</name>
-                  <description>Enable</description>
-                  <value>0</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>DISABLE</name>
-                  <description>Disable</description>
-                  <value>1</value>
-                </enumeratedValue>
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>FTH</name>
-              <description>FIFO threshold selection</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>2</bitWidth>
-              <access>read-write</access>
-              <enumeratedValues>
-                <enumeratedValue>
-                  <name>QUATER_FULL</name>
-                  <value>0</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>HALF_FULL</name>
-                  <value>1</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>3QUATERS_FULL</name>
-                  <value>2</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>FULL</name>
-                  <value>3</value>
-                </enumeratedValue>
-              </enumeratedValues>
-            </field>
-          </fields>
         </register>
-        <register>
+        <register derivedFrom="S0CR">
           <name>S7CR</name>
           <displayName>S7CR</displayName>
           <description>stream x configuration
@@ -21031,253 +18817,8 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
           <size>0x20</size>
           <access>read-write</access>
           <resetValue>0x00000000</resetValue>
-          <fields>
-            <field>
-              <name>CHSEL</name>
-              <description>Channel selection</description>
-              <bitOffset>25</bitOffset>
-              <bitWidth>3</bitWidth>
-              <enumeratedValues>
-                <enumeratedValue>
-                  <name>CHANNEL_0</name>
-                  <value>0</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>CHANNEL_1</name>
-                  <value>1</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>CHANNEL_2</name>
-                  <value>2</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>CHANNEL_3</name>
-                  <value>3</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>CHANNEL_4</name>
-                  <value>4</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>CHANNEL_5</name>
-                  <value>5</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>CHANNEL_6</name>
-                  <value>6</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>CHANNEL_7</name>
-                  <value>7</value>
-                </enumeratedValue>
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>MBURST</name>
-              <description>Memory burst transfer
-              configuration</description>
-              <bitOffset>23</bitOffset>
-              <bitWidth>2</bitWidth>
-              <enumeratedValues>
-                <name>MBURST</name>
-                <enumeratedValue>
-                  <name>SINGLE</name>
-                  <value>0</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>INC4</name>
-                  <value>1</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>INC8</name>
-                  <value>2</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>INC16</name>
-                  <value>3</value>
-                </enumeratedValue>
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>PBURST</name>
-              <description>Peripheral burst transfer
-              configuration</description>
-              <bitOffset>21</bitOffset>
-              <bitWidth>2</bitWidth>
-              <enumeratedValues derivedFrom="MBURST">
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>CT</name>
-              <description>Current target (only in double buffer
-              mode)</description>
-              <bitOffset>19</bitOffset>
-              <bitWidth>1</bitWidth>
-            </field>
-            <field>
-              <name>DBM</name>
-              <description>Double buffer mode</description>
-              <bitOffset>18</bitOffset>
-              <bitWidth>1</bitWidth>
-            </field>
-            <field>
-              <name>PL</name>
-              <description>Priority level</description>
-              <bitOffset>16</bitOffset>
-              <bitWidth>2</bitWidth>
-              <enumeratedValues>
-                <enumeratedValue>
-                  <name>LOW</name>
-                  <value>0</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>MEDIUM</name>
-                  <value>1</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>HIGH</name>
-                  <value>2</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>VERY_HIGH</name>
-                  <value>3</value>
-                </enumeratedValue>
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>PINCOS</name>
-              <description>Peripheral increment offset
-              size</description>
-              <bitOffset>15</bitOffset>
-              <bitWidth>1</bitWidth>
-            </field>
-            <field>
-              <name>MSIZE</name>
-              <description>Memory data size</description>
-              <bitOffset>13</bitOffset>
-              <bitWidth>2</bitWidth>
-              <enumeratedValues>
-                <name>MSIZE</name>
-                <enumeratedValue>
-                  <name>BYTE</name>
-                  <value>0</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>HALF_WORD</name>
-                  <value>1</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>WORD</name>
-                  <value>2</value>
-                </enumeratedValue>
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>PSIZE</name>
-              <description>Peripheral data size</description>
-              <bitOffset>11</bitOffset>
-              <bitWidth>2</bitWidth>
-              <enumeratedValues derivedFrom="MSIZE">
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>MINC</name>
-              <description>Memory increment mode</description>
-              <bitOffset>10</bitOffset>
-              <bitWidth>1</bitWidth>
-              <enumeratedValues derivedFrom="ADC_Common.CCR.TSVREFE.ENABLED">
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>PINC</name>
-              <description>Peripheral increment mode</description>
-              <bitOffset>9</bitOffset>
-              <bitWidth>1</bitWidth>
-              <enumeratedValues derivedFrom="ADC_Common.CCR.TSVREFE.ENABLED">
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>CIRC</name>
-              <description>Circular mode</description>
-              <bitOffset>8</bitOffset>
-              <bitWidth>1</bitWidth>
-              <enumeratedValues derivedFrom="ADC_Common.CCR.TSVREFE.ENABLED">
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>DIR</name>
-              <description>Data transfer direction</description>
-              <bitOffset>6</bitOffset>
-              <bitWidth>2</bitWidth>
-              <enumeratedValues>
-                <enumeratedValue>
-                  <name>PERIPH_TO_MEMORY</name>
-                  <value>0</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>MEMORY_TO_PERIPH</name>
-                  <value>1</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>MEMORY_TO_MEMORY</name>
-                  <value>2</value>
-                </enumeratedValue>
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>PFCTRL</name>
-              <description>Peripheral flow controller</description>
-              <bitOffset>5</bitOffset>
-              <bitWidth>1</bitWidth>
-            </field>
-            <field>
-              <name>TCIE</name>
-              <description>Transfer complete interrupt
-              enable</description>
-              <bitOffset>4</bitOffset>
-              <bitWidth>1</bitWidth>
-              <enumeratedValues derivedFrom="ADC_Common.CCR.TSVREFE.ENABLED">
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>HTIE</name>
-              <description>Half transfer interrupt
-              enable</description>
-              <bitOffset>3</bitOffset>
-              <bitWidth>1</bitWidth>
-              <enumeratedValues derivedFrom="ADC_Common.CCR.TSVREFE.ENABLED">
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>TEIE</name>
-              <description>Transfer error interrupt
-              enable</description>
-              <bitOffset>2</bitOffset>
-              <bitWidth>1</bitWidth>
-              <enumeratedValues derivedFrom="ADC_Common.CCR.TSVREFE.ENABLED">
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>DMEIE</name>
-              <description>Direct mode error interrupt
-              enable</description>
-              <bitOffset>1</bitOffset>
-              <bitWidth>1</bitWidth>
-              <enumeratedValues derivedFrom="ADC_Common.CCR.TSVREFE.ENABLED">
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>EN</name>
-              <description>Stream enable / flag stream ready when
-              read low</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>1</bitWidth>
-              <enumeratedValues derivedFrom="ADC_Common.CCR.TSVREFE.ENABLED">
-              </enumeratedValues>
-            </field>
-          </fields>
         </register>
-        <register>
+        <register derivedFrom="S0NDTR">
           <name>S7NDTR</name>
           <displayName>S7NDTR</displayName>
           <description>stream x number of data
@@ -21286,17 +18827,8 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
           <size>0x20</size>
           <access>read-write</access>
           <resetValue>0x00000000</resetValue>
-          <fields>
-            <field>
-              <name>NDT</name>
-              <description>Number of data items to
-              transfer</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>16</bitWidth>
-            </field>
-          </fields>
         </register>
-        <register>
+        <register derivedFrom="S0PAR">
           <name>S7PAR</name>
           <displayName>S7PAR</displayName>
           <description>stream x peripheral address
@@ -21305,16 +18837,8 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
           <size>0x20</size>
           <access>read-write</access>
           <resetValue>0x00000000</resetValue>
-          <fields>
-            <field>
-              <name>PA</name>
-              <description>Peripheral address</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>32</bitWidth>
-            </field>
-          </fields>
         </register>
-        <register>
+        <register derivedFrom="S0M0AR">
           <name>S7M0AR</name>
           <displayName>S7M0AR</displayName>
           <description>stream x memory 0 address
@@ -21323,16 +18847,8 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
           <size>0x20</size>
           <access>read-write</access>
           <resetValue>0x00000000</resetValue>
-          <fields>
-            <field>
-              <name>M0A</name>
-              <description>Memory 0 address</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>32</bitWidth>
-            </field>
-          </fields>
         </register>
-        <register>
+        <register derivedFrom="S0M1AR">
           <name>S7M1AR</name>
           <displayName>S7M1AR</displayName>
           <description>stream x memory 1 address
@@ -21341,113 +18857,14 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
           <size>0x20</size>
           <access>read-write</access>
           <resetValue>0x00000000</resetValue>
-          <fields>
-            <field>
-              <name>M1A</name>
-              <description>Memory 1 address (used in case of Double
-              buffer mode)</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>32</bitWidth>
-            </field>
-          </fields>
         </register>
-        <register>
+        <register derivedFrom="S0FCR">
           <name>S7FCR</name>
           <displayName>S7FCR</displayName>
           <description>stream x FIFO control register</description>
           <addressOffset>0xCC</addressOffset>
           <size>0x20</size>
           <resetValue>0x00000021</resetValue>
-          <fields>
-            <field>
-              <name>FEIE</name>
-              <description>FIFO error interrupt
-              enable</description>
-              <bitOffset>7</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-              <enumeratedValues derivedFrom="ADC_Common.CCR.TSVREFE.ENABLED">
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>FS</name>
-              <description>FIFO status</description>
-              <bitOffset>3</bitOffset>
-              <bitWidth>3</bitWidth>
-              <access>read-only</access>
-              <enumeratedValues>
-                <enumeratedValue>
-                  <name>THRESHOLD_1QUATERFULL</name>
-                  <value>0</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>THRESHOLD_HALFFULL</name>
-                  <value>1</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>THRESHOLD_3QUATERSFULL</name>
-                  <value>2</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>THRESHOLD_FULL</name>
-                  <value>3</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>EMPTY</name>
-                  <value>4</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>FULL</name>
-                  <value>5</value>
-                </enumeratedValue>
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>DMDIS</name>
-              <description>Direct mode disable</description>
-              <bitOffset>2</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-              <enumeratedValues>
-                <name>DISABLED</name>
-                <enumeratedValue>
-                  <name>ENABLE</name>
-                  <description>Enable</description>
-                  <value>0</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>DISABLE</name>
-                  <description>Disable</description>
-                  <value>1</value>
-                </enumeratedValue>
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>FTH</name>
-              <description>FIFO threshold selection</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>2</bitWidth>
-              <access>read-write</access>
-              <enumeratedValues>
-                <enumeratedValue>
-                  <name>QUATER_FULL</name>
-                  <value>0</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>HALF_FULL</name>
-                  <value>1</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>3QUATERS_FULL</name>
-                  <value>2</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>FULL</name>
-                  <value>3</value>
-                </enumeratedValue>
-              </enumeratedValues>
-            </field>
-          </fields>
         </register>
       </registers>
     </peripheral>
@@ -25915,7 +23332,7 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
                   <name>FALSE</name>
                   <value>1</value>
                 </enumeratedValue>
-              </enumeratedValues> 
+              </enumeratedValues>
             </field>
             <field>
               <name>SPE</name>
