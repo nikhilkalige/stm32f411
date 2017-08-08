@@ -23387,7 +23387,15 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
               <description>Master selection</description>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
-              <enumeratedValues derivedFrom="ADC_Common.CCR.TSVREFE.ENABLED">
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>SLAVE</name>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>MASTER</name>
+                  <value>1</value>
+                </enumeratedValue>
               </enumeratedValues>
             </field>
             <field>
