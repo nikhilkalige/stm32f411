@@ -18034,10 +18034,11 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
           </fields>
         </register>
         <register>
-          <name>S0CR</name>
-          <displayName>S0CR</displayName>
-          <description>stream x configuration
-          register</description>
+          <dim>8</dim>
+          <dimIncrement>0x18</dimIncrement>
+          <dimIndex>0-7</dimIndex>
+          <name>S%sCR</name>
+          <description>stream x configuration register</description>
           <addressOffset>0x10</addressOffset>
           <size>0x20</size>
           <access>read-write</access>
@@ -18289,10 +18290,11 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
           </fields>
         </register>
         <register>
-          <name>S0NDTR</name>
-          <displayName>S0NDTR</displayName>
-          <description>stream x number of data
-          register</description>
+          <dim>8</dim>
+          <dimIncrement>0x18</dimIncrement>
+          <dimIndex>0-7</dimIndex>
+          <name>S%sNDTR</name>
+          <description>stream x number of data register</description>
           <addressOffset>0x14</addressOffset>
           <size>0x20</size>
           <access>read-write</access>
@@ -18308,10 +18310,11 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
           </fields>
         </register>
         <register>
-          <name>S0PAR</name>
-          <displayName>S0PAR</displayName>
-          <description>stream x peripheral address
-          register</description>
+          <dim>8</dim>
+          <dimIncrement>0x18</dimIncrement>
+          <dimIndex>0-7</dimIndex>
+          <name>S%sPAR</name>
+          <description>stream x peripheral address register</description>
           <addressOffset>0x18</addressOffset>
           <size>0x20</size>
           <access>read-write</access>
@@ -18326,7 +18329,10 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
           </fields>
         </register>
         <register>
-          <name>S0M0AR</name>
+          <dim>8</dim>
+          <dimIncrement>0x18</dimIncrement>
+          <dimIndex>0-7</dimIndex>
+          <name>S%sM0AR</name>
           <displayName>S0M0AR</displayName>
           <description>stream x memory 0 address
           register</description>
@@ -18344,10 +18350,11 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
           </fields>
         </register>
         <register>
-          <name>S0M1AR</name>
-          <displayName>S0M1AR</displayName>
-          <description>stream x memory 1 address
-          register</description>
+          <dim>8</dim>
+          <dimIncrement>0x18</dimIncrement>
+          <dimIndex>0-7</dimIndex>
+          <name>S%sM1AR</name>
+          <description>stream x memory 1 address register</description>
           <addressOffset>0x20</addressOffset>
           <size>0x20</size>
           <access>read-write</access>
@@ -18363,8 +18370,10 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
           </fields>
         </register>
         <register>
-          <name>S0FCR</name>
-          <displayName>S0FCR</displayName>
+          <dim>8</dim>
+          <dimIncrement>0x18</dimIncrement>
+          <dimIndex>0-7</dimIndex>
+          <name>S%sFCR</name>
           <description>stream x FIFO control register</description>
           <addressOffset>0x24</addressOffset>
           <size>0x20</size>
@@ -18459,412 +18468,6 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
               </enumeratedValues>
             </field>
           </fields>
-        </register>
-        <register derivedFrom="S0CR">
-          <name>S1CR</name>
-          <displayName>S1CR</displayName>
-          <description>stream x configuration
-          register</description>
-          <addressOffset>0x28</addressOffset>
-          <size>0x20</size>
-          <access>read-write</access>
-          <resetValue>0x00000000</resetValue>
-        </register>
-        <register derivedFrom="S0NDTR">
-          <name>S1NDTR</name>
-          <displayName>S1NDTR</displayName>
-          <description>stream x number of data
-          register</description>
-          <addressOffset>0x2C</addressOffset>
-          <size>0x20</size>
-          <access>read-write</access>
-          <resetValue>0x00000000</resetValue>
-        </register>
-        <register derivedFrom="S0PAR">
-          <name>S1PAR</name>
-          <displayName>S1PAR</displayName>
-          <description>stream x peripheral address
-          register</description>
-          <addressOffset>0x30</addressOffset>
-          <size>0x20</size>
-          <access>read-write</access>
-          <resetValue>0x00000000</resetValue>
-        </register>
-        <register derivedFrom="S0M0AR">
-          <name>S1M0AR</name>
-          <displayName>S1M0AR</displayName>
-          <description>stream x memory 0 address
-          register</description>
-          <addressOffset>0x34</addressOffset>
-          <size>0x20</size>
-          <access>read-write</access>
-          <resetValue>0x00000000</resetValue>
-        </register>
-        <register derivedFrom="S0M1AR">
-          <name>S1M1AR</name>
-          <displayName>S1M1AR</displayName>
-          <description>stream x memory 1 address
-          register</description>
-          <addressOffset>0x38</addressOffset>
-          <size>0x20</size>
-          <access>read-write</access>
-          <resetValue>0x00000000</resetValue>
-        </register>
-        <register derivedFrom="S0FCR">
-          <name>S1FCR</name>
-          <displayName>S1FCR</displayName>
-          <description>stream x FIFO control register</description>
-          <addressOffset>0x3C</addressOffset>
-          <size>0x20</size>
-          <resetValue>0x00000021</resetValue>
-        </register>
-        <register derivedFrom="S0CR">
-          <name>S2CR</name>
-          <displayName>S2CR</displayName>
-          <description>stream x configuration
-          register</description>
-          <addressOffset>0x40</addressOffset>
-          <size>0x20</size>
-          <access>read-write</access>
-          <resetValue>0x00000000</resetValue>
-        </register>
-        <register derivedFrom="S0NDTR">
-          <name>S2NDTR</name>
-          <displayName>S2NDTR</displayName>
-          <description>stream x number of data
-          register</description>
-          <addressOffset>0x44</addressOffset>
-          <size>0x20</size>
-          <access>read-write</access>
-          <resetValue>0x00000000</resetValue>
-        </register>
-        <register derivedFrom="S0PAR">
-          <name>S2PAR</name>
-          <displayName>S2PAR</displayName>
-          <description>stream x peripheral address
-          register</description>
-          <addressOffset>0x48</addressOffset>
-          <size>0x20</size>
-          <access>read-write</access>
-          <resetValue>0x00000000</resetValue>
-        </register>
-        <register derivedFrom="S0M0AR">
-          <name>S2M0AR</name>
-          <displayName>S2M0AR</displayName>
-          <description>stream x memory 0 address
-          register</description>
-          <addressOffset>0x4C</addressOffset>
-          <size>0x20</size>
-          <access>read-write</access>
-          <resetValue>0x00000000</resetValue>
-        </register>
-        <register derivedFrom="S0M1AR">
-          <name>S2M1AR</name>
-          <displayName>S2M1AR</displayName>
-          <description>stream x memory 1 address
-          register</description>
-          <addressOffset>0x50</addressOffset>
-          <size>0x20</size>
-          <access>read-write</access>
-          <resetValue>0x00000000</resetValue>
-        </register>
-        <register derivedFrom="S0FCR">
-          <name>S2FCR</name>
-          <displayName>S2FCR</displayName>
-          <description>stream x FIFO control register</description>
-          <addressOffset>0x54</addressOffset>
-          <size>0x20</size>
-          <resetValue>0x00000021</resetValue>
-        </register>
-        <register derivedFrom="S0CR">
-          <name>S3CR</name>
-          <displayName>S3CR</displayName>
-          <description>stream x configuration
-          register</description>
-          <addressOffset>0x58</addressOffset>
-          <size>0x20</size>
-          <access>read-write</access>
-          <resetValue>0x00000000</resetValue>
-        </register>
-        <register derivedFrom="S0NDTR">
-          <name>S3NDTR</name>
-          <displayName>S3NDTR</displayName>
-          <description>stream x number of data
-          register</description>
-          <addressOffset>0x5C</addressOffset>
-          <size>0x20</size>
-          <access>read-write</access>
-          <resetValue>0x00000000</resetValue>
-        </register>
-        <register derivedFrom="S0PAR">
-          <name>S3PAR</name>
-          <displayName>S3PAR</displayName>
-          <description>stream x peripheral address
-          register</description>
-          <addressOffset>0x60</addressOffset>
-          <size>0x20</size>
-          <access>read-write</access>
-          <resetValue>0x00000000</resetValue>
-          </register>
-        <register derivedFrom="S0M0AR">
-          <name>S3M0AR</name>
-          <displayName>S3M0AR</displayName>
-          <description>stream x memory 0 address
-          register</description>
-          <addressOffset>0x64</addressOffset>
-          <size>0x20</size>
-          <access>read-write</access>
-          <resetValue>0x00000000</resetValue>
-        </register>
-        <register derivedFrom="S0M1AR">
-          <name>S3M1AR</name>
-          <displayName>S3M1AR</displayName>
-          <description>stream x memory 1 address
-          register</description>
-          <addressOffset>0x68</addressOffset>
-          <size>0x20</size>
-          <access>read-write</access>
-          <resetValue>0x00000000</resetValue>
-        </register>
-        <register derivedFrom="S0FCR">
-          <name>S3FCR</name>
-          <displayName>S3FCR</displayName>
-          <description>stream x FIFO control register</description>
-          <addressOffset>0x6C</addressOffset>
-          <size>0x20</size>
-          <resetValue>0x00000021</resetValue>
-        </register>
-        <register derivedFrom="S0CR">
-          <name>S4CR</name>
-          <displayName>S4CR</displayName>
-          <description>stream x configuration
-          register</description>
-          <addressOffset>0x70</addressOffset>
-          <size>0x20</size>
-          <access>read-write</access>
-          <resetValue>0x00000000</resetValue>
-        </register>
-        <register derivedFrom="S0NDTR">
-          <name>S4NDTR</name>
-          <displayName>S4NDTR</displayName>
-          <description>stream x number of data
-          register</description>
-          <addressOffset>0x74</addressOffset>
-          <size>0x20</size>
-          <access>read-write</access>
-          <resetValue>0x00000000</resetValue>
-        </register>
-        <register derivedFrom="S0PAR">
-          <name>S4PAR</name>
-          <displayName>S4PAR</displayName>
-          <description>stream x peripheral address
-          register</description>
-          <addressOffset>0x78</addressOffset>
-          <size>0x20</size>
-          <access>read-write</access>
-          <resetValue>0x00000000</resetValue>
-        </register>
-        <register derivedFrom="S0M0AR">
-          <name>S4M0AR</name>
-          <displayName>S4M0AR</displayName>
-          <description>stream x memory 0 address
-          register</description>
-          <addressOffset>0x7C</addressOffset>
-          <size>0x20</size>
-          <access>read-write</access>
-          <resetValue>0x00000000</resetValue>
-        </register>
-        <register derivedFrom="S0M1AR">
-          <name>S4M1AR</name>
-          <displayName>S4M1AR</displayName>
-          <description>stream x memory 1 address
-          register</description>
-          <addressOffset>0x80</addressOffset>
-          <size>0x20</size>
-          <access>read-write</access>
-          <resetValue>0x00000000</resetValue>
-        </register>
-        <register derivedFrom="S0FCR">
-          <name>S4FCR</name>
-          <displayName>S4FCR</displayName>
-          <description>stream x FIFO control register</description>
-          <addressOffset>0x84</addressOffset>
-          <size>0x20</size>
-          <resetValue>0x00000021</resetValue>
-        </register>
-        <register derivedFrom="S0CR">
-          <name>S5CR</name>
-          <displayName>S5CR</displayName>
-          <description>stream x configuration
-          register</description>
-          <addressOffset>0x88</addressOffset>
-          <size>0x20</size>
-          <access>read-write</access>
-          <resetValue>0x00000000</resetValue>
-        </register>
-        <register derivedFrom="S0NDTR">
-          <name>S5NDTR</name>
-          <displayName>S5NDTR</displayName>
-          <description>stream x number of data
-          register</description>
-          <addressOffset>0x8C</addressOffset>
-          <size>0x20</size>
-          <access>read-write</access>
-          <resetValue>0x00000000</resetValue>
-        </register>
-        <register derivedFrom="S0PAR">
-          <name>S5PAR</name>
-          <displayName>S5PAR</displayName>
-          <description>stream x peripheral address
-          register</description>
-          <addressOffset>0x90</addressOffset>
-          <size>0x20</size>
-          <access>read-write</access>
-          <resetValue>0x00000000</resetValue>
-        </register>
-        <register derivedFrom="S0M0AR">
-          <name>S5M0AR</name>
-          <displayName>S5M0AR</displayName>
-          <description>stream x memory 0 address
-          register</description>
-          <addressOffset>0x94</addressOffset>
-          <size>0x20</size>
-          <access>read-write</access>
-          <resetValue>0x00000000</resetValue>
-        </register>
-        <register derivedFrom="S0M1AR">
-          <name>S5M1AR</name>
-          <displayName>S5M1AR</displayName>
-          <description>stream x memory 1 address
-          register</description>
-          <addressOffset>0x98</addressOffset>
-          <size>0x20</size>
-          <access>read-write</access>
-          <resetValue>0x00000000</resetValue>
-        </register>
-        <register derivedFrom="S0FCR">
-          <name>S5FCR</name>
-          <displayName>S5FCR</displayName>
-          <description>stream x FIFO control register</description>
-          <addressOffset>0x9C</addressOffset>
-          <size>0x20</size>
-          <resetValue>0x00000021</resetValue>
-        </register>
-        <register derivedFrom="S0CR">
-          <name>S6CR</name>
-          <displayName>S6CR</displayName>
-          <description>stream x configuration
-          register</description>
-          <addressOffset>0xA0</addressOffset>
-          <size>0x20</size>
-          <access>read-write</access>
-          <resetValue>0x00000000</resetValue>
-        </register>
-        <register derivedFrom="S0NDTR">
-          <name>S6NDTR</name>
-          <displayName>S6NDTR</displayName>
-          <description>stream x number of data
-          register</description>
-          <addressOffset>0xA4</addressOffset>
-          <size>0x20</size>
-          <access>read-write</access>
-          <resetValue>0x00000000</resetValue>
-        </register>
-        <register derivedFrom="S0PAR">
-          <name>S6PAR</name>
-          <displayName>S6PAR</displayName>
-          <description>stream x peripheral address
-          register</description>
-          <addressOffset>0xA8</addressOffset>
-          <size>0x20</size>
-          <access>read-write</access>
-          <resetValue>0x00000000</resetValue>
-        </register>
-        <register derivedFrom="S0M0AR">
-          <name>S6M0AR</name>
-          <displayName>S6M0AR</displayName>
-          <description>stream x memory 0 address
-          register</description>
-          <addressOffset>0xAC</addressOffset>
-          <size>0x20</size>
-          <access>read-write</access>
-          <resetValue>0x00000000</resetValue>
-        </register>
-        <register derivedFrom="S0M1AR">
-          <name>S6M1AR</name>
-          <displayName>S6M1AR</displayName>
-          <description>stream x memory 1 address
-          register</description>
-          <addressOffset>0xB0</addressOffset>
-          <size>0x20</size>
-          <access>read-write</access>
-          <resetValue>0x00000000</resetValue>
-        </register>
-        <register derivedFrom="S0FCR">
-          <name>S6FCR</name>
-          <displayName>S6FCR</displayName>
-          <description>stream x FIFO control register</description>
-          <addressOffset>0xB4</addressOffset>
-          <size>0x20</size>
-          <resetValue>0x00000021</resetValue>
-        </register>
-        <register derivedFrom="S0CR">
-          <name>S7CR</name>
-          <displayName>S7CR</displayName>
-          <description>stream x configuration
-          register</description>
-          <addressOffset>0xB8</addressOffset>
-          <size>0x20</size>
-          <access>read-write</access>
-          <resetValue>0x00000000</resetValue>
-        </register>
-        <register derivedFrom="S0NDTR">
-          <name>S7NDTR</name>
-          <displayName>S7NDTR</displayName>
-          <description>stream x number of data
-          register</description>
-          <addressOffset>0xBC</addressOffset>
-          <size>0x20</size>
-          <access>read-write</access>
-          <resetValue>0x00000000</resetValue>
-        </register>
-        <register derivedFrom="S0PAR">
-          <name>S7PAR</name>
-          <displayName>S7PAR</displayName>
-          <description>stream x peripheral address
-          register</description>
-          <addressOffset>0xC0</addressOffset>
-          <size>0x20</size>
-          <access>read-write</access>
-          <resetValue>0x00000000</resetValue>
-        </register>
-        <register derivedFrom="S0M0AR">
-          <name>S7M0AR</name>
-          <displayName>S7M0AR</displayName>
-          <description>stream x memory 0 address
-          register</description>
-          <addressOffset>0xC4</addressOffset>
-          <size>0x20</size>
-          <access>read-write</access>
-          <resetValue>0x00000000</resetValue>
-        </register>
-        <register derivedFrom="S0M1AR">
-          <name>S7M1AR</name>
-          <displayName>S7M1AR</displayName>
-          <description>stream x memory 1 address
-          register</description>
-          <addressOffset>0xC8</addressOffset>
-          <size>0x20</size>
-          <access>read-write</access>
-          <resetValue>0x00000000</resetValue>
-        </register>
-        <register derivedFrom="S0FCR">
-          <name>S7FCR</name>
-          <displayName>S7FCR</displayName>
-          <description>stream x FIFO control register</description>
-          <addressOffset>0xCC</addressOffset>
-          <size>0x20</size>
-          <resetValue>0x00000021</resetValue>
         </register>
       </registers>
     </peripheral>
