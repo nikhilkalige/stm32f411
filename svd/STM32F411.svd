@@ -17426,6 +17426,46 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
         <description>RCC global interrupt</description>
         <value>5</value>
       </interrupt>
+      <interrupt>
+        <name>DMA2_Stream0</name>
+        <description>DMA2 Stream0 global interrupt</description>
+        <value>56</value>
+      </interrupt>
+      <interrupt>
+        <name>DMA2_Stream1</name>
+        <description>DMA2 Stream1 global interrupt</description>
+        <value>57</value>
+      </interrupt>
+      <interrupt>
+        <name>DMA2_Stream2</name>
+        <description>DMA2 Stream2 global interrupt</description>
+        <value>58</value>
+      </interrupt>
+      <interrupt>
+        <name>DMA2_Stream3</name>
+        <description>DMA2 Stream3 global interrupt</description>
+        <value>59</value>
+      </interrupt>
+      <interrupt>
+        <name>DMA2_Stream4</name>
+        <description>DMA2 Stream4 global interrupt</description>
+        <value>60</value>
+      </interrupt>
+      <interrupt>
+        <name>DMA2_Stream5</name>
+        <description>DMA2 Stream5 global interrupt</description>
+        <value>68</value>
+      </interrupt>
+      <interrupt>
+        <name>DMA2_Stream6</name>
+        <description>DMA2 Stream6 global interrupt</description>
+        <value>69</value>
+      </interrupt>
+      <interrupt>
+        <name>DMA2_Stream7</name>
+        <description>DMA2 Stream7 global interrupt</description>
+        <value>70</value>
+      </interrupt>
       <registers>
         <register>
           <name>LISR</name>
@@ -18485,6 +18525,46 @@ xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
         <description>RTC Alarms (A and B) through EXTI line
         interrupt</description>
         <value>41</value>
+      </interrupt>
+      <interrupt>
+        <name>DMA1_Stream0</name>
+        <description>DMA1 Stream0 global interrupt</description>
+        <value>11</value>
+      </interrupt>
+      <interrupt>
+        <name>DMA1_Stream1</name>
+        <description>DMA1 Stream1 global interrupt</description>
+        <value>12</value>
+      </interrupt>
+      <interrupt>
+        <name>DMA1_Stream2</name>
+        <description>DMA1 Stream2 global interrupt</description>
+        <value>13</value>
+      </interrupt>
+      <interrupt>
+        <name>DMA1_Stream3</name>
+        <description>DMA1 Stream3 global interrupt</description>
+        <value>14</value>
+      </interrupt>
+      <interrupt>
+        <name>DMA1_Stream4</name>
+        <description>DMA1 Stream4 global interrupt</description>
+        <value>15</value>
+      </interrupt>
+      <interrupt>
+        <name>DMA1_Stream5</name>
+        <description>DMA1 Stream5 global interrupt</description>
+        <value>16</value>
+      </interrupt>
+      <interrupt>
+        <name>DMA1_Stream6</name>
+        <description>DMA1 Stream6 global interrupt</description>
+        <value>17</value>
+      </interrupt>
+      <interrupt>
+        <name>DMA1_Stream7</name>
+        <description>DMA1 Stream7 global interrupt</description>
+        <value>47</value>
       </interrupt>
     </peripheral>
     <peripheral>
