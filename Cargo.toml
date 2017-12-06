@@ -10,8 +10,8 @@ repository = "https://github.com/nikhilkalige/stm32f411"
 version = "0.1.0"
 
 [dependencies]
-cortex-m = "0.3.0"
-bare-metal = "0.1.0"
+cortex-m = { "git" = "https://github.com/japaric/cortex-m", branch = "singletons" }
+bare-metal = "0.1.1"
 vcell = "0.1.0"
 
 [dependencies.cortex-m-rt]
