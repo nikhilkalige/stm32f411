@@ -11,12 +11,12 @@ version = "0.1.0"
 
 [dependencies]
 cortex-m = { git = "https://github.com/japaric/cortex-m" }
-bare-metal = "0.1.1"
+bare-metal = "0.1.0"
 vcell = "0.1.0"
 
 [dependencies.cortex-m-rt]
 optional = true
-version = "0.3.6"
+version = "0.3.9"
 
 [features]
 rt = ["cortex-m-rt"]
